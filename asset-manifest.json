@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ecm-finder/static/css/main.7116e439.css",
+    "main.js": "/ecm-finder/static/js/main.d5021301.js",
+    "index.html": "/ecm-finder/index.html",
+    "main.7116e439.css.map": "/ecm-finder/static/css/main.7116e439.css.map",
+    "main.d5021301.js.map": "/ecm-finder/static/js/main.d5021301.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7116e439.css",
+    "static/js/main.d5021301.js"
+  ]
+}
