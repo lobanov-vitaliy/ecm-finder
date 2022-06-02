@@ -6,8 +6,17 @@
   padding: 0px;
 }
 
-html, body, #root {
+html, body, #root, main {
   height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main > div {
+  position: relative;
+  width: 100%;
 }
 
 header {
@@ -15,4 +24,51 @@ header {
   height: 50px;
   display: flex;
   align-items: center;
+}
+
+.control-panel {
+  z-index: 1100;
+  height: 50px;
+  padding: 10px;
+  background: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.table-block {
+  height: calc(50% - 1px);
+  display: none;
+  border-top: 1px solid #e8e8e8;
+}
+
+.table-block-open {
+  display: block;
+}
+
+.table-block-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-cell {
+  box-sizing: border-box;
+  padding: 5px 0px;
+  border-bottom: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  background: #FFF;
+  text-align: center;
+}
+
+.table-cell-range {
+  background-color: #a3d5d1;
+}
+
+.table-cell-header {
+  background:#f7f7f7;
+  font-weight: bold;
 }
