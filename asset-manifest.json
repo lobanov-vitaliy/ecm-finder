@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ecm-finder/static/css/main.84d9ba43.css",
-    "main.js": "/ecm-finder/static/js/main.e0529737.js",
+    "main.js": "/ecm-finder/static/js/main.ffe8955f.js",
     "index.html": "/ecm-finder/index.html",
     "main.84d9ba43.css.map": "/ecm-finder/static/css/main.84d9ba43.css.map",
-    "main.e0529737.js.map": "/ecm-finder/static/js/main.e0529737.js.map"
+    "main.ffe8955f.js.map": "/ecm-finder/static/js/main.ffe8955f.js.map"
   },
   "entrypoints": [
     "static/css/main.84d9ba43.css",
-    "static/js/main.e0529737.js"
+    "static/js/main.ffe8955f.js"
   ]
 }
