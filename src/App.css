@@ -68,6 +68,19 @@ header {
   background-color: #a3d5d1;
 }
 
+.table-bottom-left-grid {
+  border-right: 2px solid #e8e8e8;
+
+}
+.table-top-left-grid {
+  border-bottom: 2px solid #e8e8e8;
+  border-right: 2px solid #e8e8e8;
+}
+
+.table-top-right-grid {
+  border-bottom: 2px solid #e8e8e8;
+}
+
 .table-cell-header {
   background:#f7f7f7;
   font-weight: bold;

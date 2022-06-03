@@ -4,17 +4,6 @@ import React, { useCallback, useMemo } from "react";
 import { MultiGrid } from "react-virtualized";
 import { AutoSizer } from "react-virtualized";
 
-const STYLE_BOTTOM_LEFT_GRID = {
-  borderRight: "2px solid #e8e8e8",
-};
-const STYLE_TOP_LEFT_GRID = {
-  borderBottom: "2px solid #e8e8e8",
-  borderRight: "2px solid #e8e8e8",
-};
-const STYLE_TOP_RIGHT_GRID = {
-  borderBottom: "2px solid #e8e8e8",
-};
-
 const TableComponent = ({ range, data = [], selected, onSelected }) => {
   const header = useMemo(() => {
     const [header = []] = data || [];
@@ -100,9 +89,9 @@ const TableComponent = ({ range, data = [], selected, onSelected }) => {
           rowHeight={30}
           rowCount={data.length}
           width={width}
-          styleBottomLeftGrid={STYLE_BOTTOM_LEFT_GRID}
-          styleTopLeftGrid={STYLE_TOP_LEFT_GRID}
-          styleTopRightGrid={STYLE_TOP_RIGHT_GRID}
+          classNameBottomLeftGrid="table-bottom-left-grid"
+          classNameTopLeftGrid="table-top-left-grid"
+          classNameTopRightGrid="table-top-right-grid"
           hideTopRightGridScrollbar
           hideBottomLeftGridScrollbar
         />
