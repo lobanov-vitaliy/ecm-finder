@@ -1,5 +1,5 @@
-import React, { memo, useCallback, useEffect, useMemo, useRef } from "react";
-import { GoogleMap, Polyline, useJsApiLoader } from "@react-google-maps/api";
+import React, { memo, useCallback, useEffect, useRef } from "react";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import LatLon from "geodesy/latlon-ellipsoidal-vincenty.js";
 
 const containerStyle = {
@@ -53,7 +53,6 @@ const Map = ({ points, distance }) => {
   }, [ref, points, distance]);
 
   const onLoad = useCallback(function callback(map) {
-    map.setCenter(new window.google.maps.LatLng(49.486875, 31.049479));
     ref.current = map;
   }, []);
 
@@ -69,10 +68,10 @@ const Map = ({ points, distance }) => {
     <>
       <GoogleMap
         center={center}
+        zoom={zoom}
         mapTypeId="hybrid" // satellite
         mapContainerStyle={containerStyle}
         onLoad={onLoad}
-        zoom={zoom}
         onUnmount={onUnmount}
       />
     </>

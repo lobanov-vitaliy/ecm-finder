@@ -16,9 +16,9 @@ const STYLE_TOP_RIGHT_GRID = {
 };
 
 const TableComponent = ({ range, data = [], selected, onSelected }) => {
-  const [header, source] = useMemo(() => {
-    const [header = [], ...source] = data || [];
-    return [header, source];
+  const header = useMemo(() => {
+    const [header = []] = data || [];
+    return header;
   }, [data]);
 
   const onSelectRow = (id, checked) => {
@@ -48,6 +48,12 @@ const TableComponent = ({ range, data = [], selected, onSelected }) => {
         >
           {(() => {
             if (columnIndex === 0) {
+              if (rowIndex === 0) {
+                return "#";
+              }
+              return rowIndex;
+            }
+            if (columnIndex === 1) {
               if (rowIndex !== 0) {
                 return (
                   <Checkbox
@@ -74,8 +80,18 @@ const TableComponent = ({ range, data = [], selected, onSelected }) => {
       {({ width, height }) => (
         <MultiGrid
           cellRenderer={cellRenderer}
-          columnWidth={({ index }) => (index === 0 ? 50 : 100)}
-          columnCount={header.columns.length + 1}
+          columnWidth={({ index }) => {
+            if (index === 0) {
+              return 50;
+            }
+
+            if (index === 1) {
+              return 30;
+            }
+
+            return 80;
+          }}
+          columnCount={header.columns.length + 2}
           fixedColumnCount={5}
           fixedRowCount={1}
           enableFixedColumnScroll
